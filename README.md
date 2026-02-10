@@ -1,6 +1,6 @@
 # Archive of Our Own Catppuccin Mocha Theme
 
-AO3 userstyle, uses Catppuccin Mocha color palette.
+AO3 userstyle, uses [Catppuccin Mocha](https://catppuccin.com/palette#flavor-mocha) color palette.
 
 ## Features
 
@@ -16,4 +16,4 @@ AO3 userstyle, uses Catppuccin Mocha color palette.
 
 ## Installation
 
-Can be installed from [UserStyles.world](https://userstyles.world/style/26445/ao3-catppuccin-mochahttps://userstyles.world/style/1488) with [Stylus](https://add0n.com/stylus.html).
+Can be installed from [UserStyles.world](https://userstyles.world/style/26445/ao3-catppuccin-mocha) with [Stylus](https://add0n.com/stylus.html).
