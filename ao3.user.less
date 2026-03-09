@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           AO3 Catppuccin
 @namespace      github.com/olutapa/ao3-catppuccin
-@version        1.1.0
+@version        1.2.0
 @description    Customizable AO3 Catppuccin Mocha style
 @author         olutapa
 
@@ -97,7 +97,8 @@
     .actions a:link,
     .actions li button,
     .actions li input,
-    .actions li input[type="submit"] {
+    .actions li input[type="submit"],
+    #small_login label[for="user_remember_me_small"] {
         padding: 0.429em 0.75em;
     }
 
@@ -141,10 +142,40 @@
         width: 1.786em;
     }
 
-    form.search input[type="text"] {
+    .invite_requests-index h2 {
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    .invite_requests-index h3 {
+        font-size: 1.1em;
+        font-weight: 600;
+        padding-top: 0.5em;
+    }
+
+    form.search input[type="text"],
+    fieldset input {
         border-radius: .4em;
         padding: 0 .6em;
         height: max-content;
+    }
+
+    #new_invite_request fieldset input {
+        border-radius: .3em;
+        padding: 0.429em 0.75em;
+        font-size: inherit;
+        line-height: 1.55 !important;
+    }
+
+    #new_invite_request fieldset p {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.643em;
+    }
+
+    #new_invite_request fieldset label[for="invite_request_email"] {
+        font-size: 1.1em;
     }
 
     #header .primary {
@@ -264,9 +295,13 @@
         background-color: var(--surface0)
     }
 
+    #header .dropdown:hover a {
+        background-color: inherit;
+    }
+
     #header .actions a:hover,
     #header .actions a:focus,
-    #header .dropdown:hover a,
+    #header .dropdown a:hover,
     #header .open a {
         background-color: var(--base);
     }
@@ -293,8 +328,10 @@
         border-radius: .3em;
     }
 
+    input:focus,
     #header #search input:focus {
         color: var(--text);
+        outline: none;
     }
 
     #header #search .button {
@@ -652,6 +689,7 @@
         box-shadow: none;
         background-color: var(--surface2);
         border: none;
+        color: var(--color);
     }
 
     .comment h4.byline {
@@ -725,6 +763,72 @@
         border: 1px solid var(--surface1);
         border-radius: .25em;
         z-index: 30;
+        padding: 1em;
+    }
+
+    #login #login-dropdown {
+        font-size: 1rem !important;
+    }
+
+    #small_login form {
+        margin: 0;
+    }
+
+    #small_login dt {
+        border-bottom: none;
+        padding: 1em 0 .375em;
+    }
+
+    #small_login dt:first-of-type {
+        padding: 0 0 .375em;
+    }
+
+    #small_login input[type="text"],
+    #small_login input[type="password"] {
+        padding: 0 0.6em;
+        height: max-content;
+    }
+
+    #small_login input[type="text"]:focus,
+    #small_login input[type="password"]:focus {
+        background-color: var(--mantle);
+        color: var(--subtext1);
+    }
+
+    #small_login p.submit {
+        margin-top: .75em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .5em;
+    }
+
+    #small_login label[for="user_remember_me_small"] {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .75em;
+        width: min-content;
+    }
+
+    #small_login #user_remember_me_small {
+        display: block;
+        padding: 0;
+        margin: 0;
+        width: 14px;
+        height: 14px;
+    }
+
+    #small_login .footnote {
+        padding-top: 1em;
+    }
+
+    #login .actions {
+        margin-right: 2em;
+    }
+
+    #new_invite_request fieldset {
+        margin: 0;
     }
 
     @media (max-width: 768px) {
@@ -738,7 +842,8 @@
             grid-row-start: 1;
         }
 
-        #greeting {
+        #greeting,
+        #login {
             grid-column: span 2 / span 2;
             grid-row-start: 2;
         }
